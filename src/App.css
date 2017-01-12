@@ -1,0 +1,28 @@
+.App {
+	box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  float: left;
+}
+.Other {
+  background-color: plum;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.List {
+	height: 100%;
+	float: right;
+	width: 50%;
+	overflow: scroll;
+	background-color: red;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.List-item {
+	width: 100%;
+	height: 30px;
+	border: 1px solid grey;
+}
