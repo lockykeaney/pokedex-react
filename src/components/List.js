@@ -9,4 +9,4 @@ const List = ({ results, onClick }) =>
 		})}
 	</div>
 
-module.exports = List;
+export default List;
