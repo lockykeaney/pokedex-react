@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Search = ({ onSubmit, onChange, value, children }) =>
-	<form className="Search" onSubmit={onSubmit}>
-		<input className="Search-input" type="text" value={value} onChange={onChange} />
-		<button className="Search-submit" type="submit" value="Search">{children}</button>
+const Search = () =>
+
+	<form
+		className="Search">
+		<input
+			className="Search-input"
+		/>
 	</form>
 
 export default Search;

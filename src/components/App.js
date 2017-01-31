@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 import List from './List';
 import Search from './Search';
 import Display from './Display';
+import Loaders from './Loaders';
 
 import Local from '../Local.json';
 
-import '../css/App.css';
+import '../css/App.scss';
 
 class App extends Component {
 
@@ -19,7 +20,8 @@ class App extends Component {
 			this.state = {
 				pokemonList: Local,
 				pokemon: {},
-				description: ''
+				description: '',
+				image: null
 			}
 		}
 
@@ -34,22 +36,33 @@ class App extends Component {
 			fetch(event.target.value)
 				.then(response => response.json())
 				.then(pokemon => {
-					console.log(pokemon);
 					return pokemon;
 				} )
-				.then(pokemon => this.setState({ pokemon: pokemon, description: pokemon.species.url, image: pokemon.sprites.front_default }))
+				.then(pokemon => this.setState({
+					pokemon: pokemon,
+					description: pokemon.species.url,
+					image: pokemon.sprites.front_default
+				}))
 		}
 
   	render() {
 		const { pokemonList, pokemon, description, image } = this.state;
     	return (
       		<div className="Pokedex">
-				<Display pokemon={pokemon} description={description} image={image} />
+				<Loaders />
+				<Display
+					pokemon={pokemon}
+					description={description}
+					image={image}
+				/>
         		<div className="Pokedex-right">
-					<div className="Pokedex-left-top"></div>
 					<div className="Pokedex-right-container">
 					<Search />
-					{ pokemonList ? <List results={pokemonList} onClick={this.fetchSinglePokemon}>List</List> : null }
+					{ pokemonList ?
+					<List
+						results={pokemonList}
+						onClick={this.fetchSinglePokemon}
+					/> : null }
 					</div>
 				</div>
 

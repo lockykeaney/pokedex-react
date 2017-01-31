@@ -1,18 +1,14 @@
 import React, {  } from 'react';
+import Sprite from './Sprite';
+import Stats from './Stats';
+import Description from './Description';
 
 const Pokemon = ({ pokemon, description, image }) =>
 
 	<div className="Pokemon">
-		<div className="Pokemon-inner">
-			<p>#{ pokemon.order }</p>
-			<p>Name: { pokemon.name }</p>
-			<p>Height: { pokemon.height }</p>
-			<p>Weight: { pokemon.weight }</p>
-		</div>
-		<div className="Pokemon-inner">
-			<p>Description: { description }</p>
-			<img src={image} />
-		</div>
+		<Sprite image={image} />
+		<Stats pokemon={pokemon} />
+		<Description description={description} />
 	</div>
 
 export default Pokemon;
