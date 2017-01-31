@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React, {  } from 'react';
 
-const Pokemon = ({ url, children, name }) =>
+const Pokemon = ({ pokemon, description, image }) =>
+
 	<div className="Pokemon">
-		{children} <h2>{name}</h2>
-		<p>{url}</p>
+		<div className="Pokemon-inner">
+			<p>#{ pokemon.order }</p>
+			<p>Name: { pokemon.name }</p>
+			<p>Height: { pokemon.height }</p>
+			<p>Weight: { pokemon.weight }</p>
+		</div>
+		<div className="Pokemon-inner">
+			<p>Description: { description }</p>
+			<img src={image} />
+		</div>
 	</div>
 
-// class Pokemon extends Component {
-// 	render() {
-// 		const { details } = this.props;
-// 		return (
-// 			<div className="Pokemon">
-// 				<h2>{details.name}</h2>
-// 			 	<p>{details.url}</p>
-// 			 </div>
-// 		)
-// 	}
-// }
 export default Pokemon;
