@@ -1,0 +1,11 @@
+.Pokemon {
+	height: 100%;
+	width: 100%;
+	&-inner {
+		text-align: left;
+		height: 60%;
+		width: 50%;
+		border: 1px solid black;
+		float:left;
+	}
+}
