@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Search = () =>
+const Search = ({ onSearch }) =>
 
 	<form
-		className="Search">
+		className="Search"
+		onSearch={onSearch} >
 		<input
 			className="Search-input"
 		/>

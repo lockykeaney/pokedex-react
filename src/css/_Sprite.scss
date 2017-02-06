@@ -1,11 +1,9 @@
 .Sprite {
 	width: 100%;
-	height: 40%;
-	background-color: plum;
+	height: auto;
 	&-inner {
 		height: 200px;
 		width: 200px;
-		margin: 0 auto;
-		background-color: white;
+		margin: 2.5% auto;
 	}
 }

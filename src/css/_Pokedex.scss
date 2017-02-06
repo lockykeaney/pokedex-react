@@ -2,18 +2,18 @@
 .Pokedex {
 	box-sizing: border-box;
 	text-align: center;
-	max-width: 960px;
+	max-width: 760px;
 	height: 90vh;
 	float: left;
 	margin: 0 auto;
 	background-color: red;
 	&-left {
 		width: 65%;
-		height: 95%;
+		height: 90%;
 		float: left;
 		&-container {
 			margin: 20px;
-			border: 5px solid grey;
+			border: 7px solid grey;
 			border-radius: 2%;
 			background-color: white;
 			height: 85%;
@@ -21,11 +21,11 @@
 	}
 	&-right {
 		width: 35%;
-		height: 90%;
+		height: 85%;
 		float: right;
 		&-container {
 			margin: 20px;
-			border: 5px solid grey;
+			border: 7px solid grey;
 			border-radius: 2%;
 			background-color: white;
 			height: 90%;

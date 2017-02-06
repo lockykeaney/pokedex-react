@@ -2,8 +2,13 @@ import React from 'react';
 
 const Loaders = () =>
 
-	<div className="Loaders">
-		<div className="use-signal"></div>
+	<div className="container">
+		<ul className="list">
+			<li className="list-item active"></li>
+			<li className="list-item active"></li>
+			<li className="list-item active"></li>
+			<li className="list-item active"></li>
+		</ul>
 	</div>
 
 

@@ -1,13 +1,49 @@
-.Loaders {
-	height: 10%;
-	width: 100%;
-	outline: 1px solid white;
-}
+$shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
 
-.use-signal {
-	height: 70px;
-	width: 70px;
-	border: 2px solid grey;
-	border-radius: 50%;
-	background-color: blue;
+.container {
+	width: 100%;
+  margin: 0;
+  box-shadow: $shadow;
+  text-align: left;
+}
+.list {
+
+  margin: 0;
+  padding: 20px;
+  list-style:none;
+  transform: translateY(-40px);
+  &-item {
+    transition: all 800ms;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-color: grey;
+  border-radius: 50%;
+  box-shadow: $shadow;
+  margin-right: 5px;
+  &:nth-child(1){
+    border: 6px solid white;
+    height: 60px;
+    width: 60px;
+    transform: translateY(40px);
+    &.active {
+      background-color: aqua;
+    }
+  }
+  &:nth-child(2){
+    &.active {
+      background-color: red;
+    }
+  }
+  &:nth-child(3){
+    &.active {
+      background-color: yellow;
+    }
+  }
+  &:nth-child(4){
+    &.active {
+      background-color: green;
+    }
+  }
+  }
 }

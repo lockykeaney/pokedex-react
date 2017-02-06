@@ -53,16 +53,15 @@ class App extends Component {
 				<Display
 					pokemon={pokemon}
 					description={description}
-					image={image}
-				/>
+					image={image} />
         		<div className="Pokedex-right">
 					<div className="Pokedex-right-container">
 					<Search />
 					{ pokemonList ?
 					<List
 						results={pokemonList}
-						onClick={this.fetchSinglePokemon}
-					/> : null }
+						onClick={this.fetchSinglePokemon} />
+					: null }
 					</div>
 				</div>
 
